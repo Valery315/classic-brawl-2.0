@@ -20,8 +20,8 @@ class LogicDailyData:
         self.writeDataReference(28, self.player.profile_icon)
         self.writeDataReference(43, self.player.name_color)
 
-        self.writeVInt(50)
-        for x in range(50):
+        self.writeVInt(0) # Кількість забраних нагород (ставимо 0, щоб можна було забирати)
+        for x in range(0):
             self.writeVInt(x)
 
         self.writeVInt(len(self.player.selected_skins))
