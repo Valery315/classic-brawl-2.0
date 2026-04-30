@@ -1,3 +1,4 @@
+import os
 from Core.Networking.Server import Server
 import json  # meh
 
@@ -29,7 +30,8 @@ class Main:
 
             """)
 
-            Server("0.0.0.0", 9339).start()
+            port = int(os.getenv("PORT", 9339))
+            Server("0.0.0.0", port).start()
         except ImportError:
             print("Some modules are missing, please run pip install -r requirements.txt on your terminal to install them.")
 
