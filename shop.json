@@ -14,59 +14,63 @@
   ],
   "Offers": [
     {
-      "Items": [
-        { "OfferID": 14, "Amount": 1 }
-      ],
+      "Items": [{ "OfferID": 14, "Amount": 10 }],
       "Currency": 3,
-      "Cost": 1500,
-      "Title": "Mega Box for Star Points",
+      "Cost": 3000,
+      "Title": "10 MEGA BOXES",
       "OfferBackground": "offer_legendary"
     },
     {
-      "Items": [
-        { "OfferID": 1, "Amount": 1000 }
-      ],
+      "Items": [{ "OfferID": 1, "Amount": 5000 }],
       "Currency": 3,
-      "Cost": 500,
-      "Title": "Gold Rush",
+      "Cost": 1000,
+      "Title": "SUPREME GOLD",
+      "OfferBackground": "offer_gold"
+    },
+    {
+      "Items": [{ "OfferID": 16, "Amount": 500 }],
+      "Currency": 3,
+      "Cost": 10000,
+      "Title": "GEM EXCHANGE MAX",
+      "OfferBackground": "offer_gems"
+    },
+    {
+      "Items": [{ "OfferID": 1, "Amount": 10000 }],
+      "Currency": 0,
+      "Cost": 100,
+      "Title": "GOLD FOR GEMS",
       "OfferBackground": "offer_gold"
     },
     {
       "Items": [
-        { "OfferID": 10, "Amount": 5 }
-      ],
-      "Currency": 3,
-      "Cost": 3000,
-      "Title": "Big Box Pack",
-      "OfferBackground": "offer_special"
-    },
-    {
-      "Items": [
-        { "OfferID": 16, "Amount": 100 }
-      ],
-      "Currency": 3,
-      "Cost": 5000,
-      "Title": "Gem Exchange",
-      "OfferBackground": "offer_gems"
-    },
-    {
-      "Items": [
-        { "OfferID": 16, "Amount": 100 },
-        { "OfferID": 1, "Amount": 500 },
-        { "OfferID": 14, "Amount": 1 }
+        { "OfferID": 16, "Amount": 1000 },
+        { "OfferID": 1, "Amount": 5000 },
+        { "OfferID": 14, "Amount": 5 }
       ],
       "Currency": 0,
       "Cost": 1,
-      "Title": "Starter Pack",
+      "Title": "ULTIMATE STARTER",
       "OfferBackground": "offer_xmas"
     },
     {
-      "Items": [
-        { "OfferID": 9, "Amount": 2000 }
-      ],
+      "Items": [{ "OfferID": 14, "Amount": 1 }],
+      "Currency": 0,
+      "Cost": 1,
+      "Title": "INFINITE MEGA BOX",
+      "OfferBackground": "offer_legendary"
+    },
+    {
+      "Items": [{ "OfferID": 10, "Amount": 10 }],
+      "Currency": 3,
+      "Cost": 2000,
+      "Title": "BIG BOX OVERLOAD",
+      "OfferBackground": "offer_special"
+    },
+    {
+      "Items": [{ "OfferID": 9, "Amount": 5000 }],
       "Currency": 1,
-      "Cost": 1000,
-      "Title": "Token Doubler for Gold",
+      "Cost": 500,
+      "Title": "DOUBLER BOOST",
       "OfferBackground": "offer_special"
     }
   ]
