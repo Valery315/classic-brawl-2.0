@@ -10,9 +10,9 @@ class LogicDailyData:
         self.writeVInt(time_stamp)
         self.writeVInt(time_stamp)
 
-        self.writeVInt(self.player.trophies)
-        self.writeVInt(self.player.high_trophies)
-        self.writeVInt(self.player.high_trophies)
+        self.writeVInt(self.player.trophies) # Поточні кубки
+        self.writeVInt(self.player.high_trophies) # Рекордні кубки
+        self.writeVInt(self.player.high_trophies) # Рекордні кубки для дороги
 
         self.writeVInt(self.player.trophy_reward)
         self.writeVInt(self.player.exp_points)
