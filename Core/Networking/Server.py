@@ -16,7 +16,13 @@ class Server:
 
     def __init__(self, ip: str, port: int):
         self.config = json.loads(open('config.json', 'r').read())
-        mongo_url = os.getenv('MONGODB_URL') or self.config.get('MongoConnectionURL')
+        # Шукаємо посилання на базу в усіх можливих змінних оточення Railway
+        mongo_url = os.getenv('MONGODB_URL') or \
+                    os.getenv('MONGO_URL') or \
+                    os.getenv('MONGODB_URI') or \
+                    os.getenv('MONGO_URI') or \
+                    self.config.get('MongoConnectionURL')
+        
         self.db = MongoDB(mongo_url)
         self.server = socket.socket()
         self.server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # You can start server with the same address
