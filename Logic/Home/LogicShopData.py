@@ -52,8 +52,8 @@ class LogicShopData:
             self.writeVInt(x["Cost"])
             self.writeVInt(x.get("Timer", 0))
 
-            self.writeVInt(1)
-            self.writeVInt(100)
+            self.writeVInt(0)   # Кількість вже куплених (0)
+            self.writeVInt(999) # Загальний ліміт покупок (999)
             self.writeUInt8(0)
 
             self.writeUInt8(0)
