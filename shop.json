@@ -42,17 +42,6 @@
       "OfferBackground": "offer_gold"
     },
     {
-      "Items": [
-        { "OfferID": 16, "Amount": 1000 },
-        { "OfferID": 1, "Amount": 5000 },
-        { "OfferID": 14, "Amount": 5 }
-      ],
-      "Currency": 0,
-      "Cost": 1,
-      "Title": "ULTIMATE STARTER",
-      "OfferBackground": "offer_xmas"
-    },
-    {
       "Items": [{ "OfferID": 14, "Amount": 1 }],
       "Currency": 0,
       "Cost": 1,
