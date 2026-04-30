@@ -63,12 +63,12 @@ class Helpers:
         self.player.exp_points = player_data['ExperiencePoints']
         self.player.profile_icon = player_data['ProfileIcon']
         self.player.name_color = player_data['NameColor']
-        self.player.brawlers_unlocked = self.player.brawlers_id
+        self.player.brawlers_unlocked = player_data['UnlockedBrawlers']
         self.player.brawlers_trophies = player_data['BrawlersTrophies']
         self.player.brawlers_high_trophies = player_data['BrawlersHighestTrophies']
         self.player.brawlers_level = player_data['BrawlersLevel']
         self.player.brawlers_powerpoints = player_data['BrawlersPowerPoints']
-        self.player.unlocked_skins = self.player.skins_id
+        self.player.unlocked_skins = player_data['UnlockedSkins']
         self.player.selected_skins = player_data['SelectedSkins']
         self.player.tickets = player_data['Tickets']
         self.player.home_brawler = player_data['SelectedBrawler']
