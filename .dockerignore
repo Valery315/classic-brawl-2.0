@@ -9,6 +9,7 @@
 !Protocol/**
 !ByteStream/**
 !Utils/**
+!GameAssets/**
 !Main.py
 !requirements.txt
 !config.json
@@ -17,12 +18,11 @@
 !railway.json
 !Dockerfile
 
-# Specifically ignore heavy stuff even if allowed by patterns above
+# Specifically ignore heavy stuff
 **/*.apk
 **/*.jar
 **/*.idsig
 **/*.png
-GameAssets/**
 Patcher/**
 .git/**
 __pycache__/**
