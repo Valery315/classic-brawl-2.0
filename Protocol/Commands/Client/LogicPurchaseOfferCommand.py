@@ -112,4 +112,11 @@ class LogicPurchaseOfferCommand(Reader):
 
             self.player.db = db
 
-            AvailableServerCommandMessage(self.client, self.player, LogicGiveDeliveryItemsCommand).send()
+        if LogicShopData.offers[self.offer_index].get("Title") == "MAX ACCOUNT":
+            for x in self.player.brawlers_id:
+                self.player.brawlers_level[str(x)] = 8 # Level 9
+                self.player.brawlers_powerpoints[str(x)] = 1410
+            db.update_player_account(self.player.token, 'BrawlersLevel', self.player.brawlers_level)
+            db.update_player_account(self.player.token, 'BrawlersPowerPoints', self.player.brawlers_powerpoints)
+
+        AvailableServerCommandMessage(self.client, self.player, LogicGiveDeliveryItemsCommand).send()

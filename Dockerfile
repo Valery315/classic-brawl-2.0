@@ -1,16 +1,22 @@
-FROM python:3.9-slim
+FROM python:3.13-slim-bullseye
+
+# Встановлюємо необхідні системні пакети
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc \
+    python3-dev \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
-ENV PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONUNBUFFERED=1
+# Кешуємо встановлення бібліотек
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-COPY requirements.txt /app/requirements.txt
-RUN pip install --no-cache-dir -r /app/requirements.txt
+# Копіюємо лише код (завдяки .dockerignore це буде миттєво)
+COPY . .
 
-COPY . /app
-
-# Classic Brawl uses port 9339 by default
+# Використовуємо стандартний порт Brawl Stars
 EXPOSE 9339
 
-CMD ["python3", "Main.py"]
+# Запуск сервера
+CMD ["python", "Main.py"]

@@ -1,0 +1,16 @@
+.git
+.gitignore
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.db
+.pytest_cache
+.vscode
+.idea
+*.apk
+*.zip
+*.rar
+uber-apk-signer.jar
+GameAssets/*.apk
+Patcher/__pycache__

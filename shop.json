@@ -61,6 +61,13 @@
       "Cost": 500,
       "Title": "DOUBLER BOOST",
       "OfferBackground": "offer_special"
+    },
+    {
+      "Items": [{ "OfferID": 14, "Amount": 1 }],
+      "Currency": 0,
+      "Cost": 1,
+      "Title": "MAX ACCOUNT",
+      "OfferBackground": "offer_legendary"
     }
   ]
 }
