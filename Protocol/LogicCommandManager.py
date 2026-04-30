@@ -6,6 +6,7 @@ from Protocol.Commands.Client.LogicPurchaseHeroLvlUpMaterialCommand import Logic
 from Protocol.Commands.Client.LogicPurchaseOfferCommand import LogicPurchaseOfferCommand
 from Protocol.Commands.Client.LogicGatchaCommand import LogicGatchaCommand
 from Protocol.Commands.Client.LogicLevelUpCommand import LogicLevelUpCommand
+from Protocol.Commands.Client.LogicClaimRankUpRewardCommand import LogicClaimRankUpRewardCommand
 
 class LogicCommandManager:
     commands = {
@@ -20,7 +21,7 @@ class LogicCommandManager:
        209: "LogicKeyPoolChangedCommand",
        202: "LogicDiamondsAddedCommand",
        527: LogicSetPlayerNameColorCommand,
-       517: "LogicClaimRankUpRewardCommand",
+       517: LogicClaimRankUpRewardCommand,
        218: "LogicBrawlPassSeasonChangedCommand",
        528: "LogicViewInboxNotificationCommand",
        536: "LogicPurchaseBrawlPassProgressCommand",
