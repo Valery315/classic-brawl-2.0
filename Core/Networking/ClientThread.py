@@ -59,7 +59,6 @@ class ClientThread(Thread):
                         self.player.err_code = 11
                         LoginFailedMessage(self.client, self.player, 'Account banned!').send()
 
-                    LobbyInfoMessage(self.client, self.player, Helpers.connected_clients['ClientsCount']).send()
 
 
                     if packet_id in packets:

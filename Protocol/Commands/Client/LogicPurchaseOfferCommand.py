@@ -69,17 +69,18 @@ class LogicPurchaseOfferCommand(Reader):
                         db.update_player_account(self.player.token, 'UnlockedBrawlers', self.player.brawlers_unlocked)
 
                 elif item["OfferID"] == 12:
-                    delivery = {'Amount': item.get("Amount", 1), 'DataRef': [16, self.brawler], 'Value':6 }
+                    delivery = {'Amount': item.get("Amount", 1), 'DataRef': [16, self.brawler], 'Value': 6}
                     self.player.delivery_items['Items'].append(delivery)
 
-                    self.player.brawlers_powerpoints[str(self.brawler)] =+ item.get("Amount", 1)
+                    self.player.brawlers_powerpoints[str(self.brawler)] += item.get("Amount", 1)
                     db.update_player_account(self.player.token, 'BrawlersPowerPoints', self.player.brawlers_powerpoints)
 
                 elif item["OfferID"] == 8:
-                    delivery = {'Amount': item.get("Amount", 1), 'DataRef': item.get("CharacterID", [16, 0]), 'Value':6}
+                    brawler_id = item.get("CharacterID", [16, 0])[1]
+                    delivery = {'Amount': item.get("Amount", 1), 'DataRef': [16, brawler_id], 'Value': 6}
                     self.player.delivery_items['Items'].append(delivery)
 
-                    self.player.brawlers_powerpoints[str(item.get("CharacterID", [16, 0]))] += item.get("Amount", 1)
+                    self.player.brawlers_powerpoints[str(brawler_id)] += item.get("Amount", 1)
                     db.update_player_account(self.player.token, 'BrawlersPowerPoints', self.player.brawlers_powerpoints)
 
                 elif item["OfferID"] in [0, 6]:
