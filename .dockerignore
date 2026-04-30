@@ -1,16 +1,28 @@
-.git
-.gitignore
-__pycache__
-*.pyc
-*.pyo
-*.pyd
-.db
-.pytest_cache
-.vscode
-.idea
-*.apk
-*.zip
-*.rar
-uber-apk-signer.jar
-GameAssets/*.apk
-Patcher/__pycache__
+# Ignore everything
+**
+
+# Allow only what is needed for the server
+!Core/**
+!DataBase/**
+!Files/**
+!Logic/**
+!Protocol/**
+!ByteStream/**
+!Utils/**
+!Main.py
+!requirements.txt
+!config.json
+!shop.json
+!events.json
+!railway.json
+!Dockerfile
+
+# Specifically ignore heavy stuff even if allowed by patterns above
+**/*.apk
+**/*.jar
+**/*.idsig
+**/*.png
+GameAssets/**
+Patcher/**
+.git/**
+__pycache__/**
